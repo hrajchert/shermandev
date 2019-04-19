@@ -1,1 +1,13 @@
-site_name: My Docs
+site_name: Sherman.dev
+site_favicon: favicon.ico
+markdown_extensions:
+  - attr_list
+theme:
+    name: cinder
+    custom_dir: cinder-theme-ext
+nav:
+    - About me: index.md
+    - Contributions: contributions.md
+    - Bike tour 2019: bici.md
+extra_css:
+  - css/home.css
