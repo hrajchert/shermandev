@@ -7,6 +7,19 @@
     /* margin-right: 1em; */
 }
 
+.map-container {
+    display: flex;
+}
+
+.map {
+    flex: 1;
+}
+
+.places-list {
+    flex: 1;
+}
+
+
 p {
     font-family: serif;
     font-size: large;

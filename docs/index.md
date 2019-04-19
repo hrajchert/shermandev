@@ -4,7 +4,7 @@ summary: A brief description of my document.
 disable_toc: true
 ---
 
-![What](/img/sherman.png){: class="profile-image"}
+![Profile image](img/sherman.png){: class="profile-image"}
 
 <div class="contact-info">
 </div>
