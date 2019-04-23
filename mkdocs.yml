@@ -8,6 +8,7 @@ theme:
 nav:
     - About me: index.md
     - Contributions: contributions.md
+    - Talks: talks.md
     - Bike tour 2019: bici.md
 extra_css:
   - css/home.css

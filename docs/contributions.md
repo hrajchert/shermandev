@@ -1,6 +1,6 @@
 ---
 title: My contributions
-summary: A brief description of my document.
+summary: These are my open contributions.
 disable_toc: true
 ---
 
@@ -36,28 +36,28 @@ These are my open contributions, you can see my work experience and education fr
 
 **Whose error is it anyway** (2018)
 
-[MeetupJs Spanish](https://www.meetup.com/NG-BAIRES/events/256418497/)
+[MeetupJs (Spanish)](https://www.meetup.com/NG-BAIRES/events/256418497/)
 
 **TypeScript can do that?** (2018)
 
-[NetConfAr Spanish](https://www.youtube.com/watch?v=56s94hJBs1Q)
+[NetConfAr (Spanish)](https://www.youtube.com/watch?v=56s94hJBs1Q)
 
 **Defensive programming in Node with PureScript** (2018)
 
-[BaNode Spanish](https://www.youtube.com/watch?v=TCLo7D-acBI)
+[BaNode (Spanish)](https://www.youtube.com/watch?v=TCLo7D-acBI)
 
 **Code is Data and viceversa** (2016)
 
-[NodeConfAr Spanish](https://www.youtube.com/watch?v=DKliwV3QdnU)
-- [DevDayAr Spanish](https://www.youtube.com/watch?v=L7t3VWMhcsQ)
+[NodeConfAr (Spanish)](https://www.youtube.com/watch?v=DKliwV3QdnU)
+- [DevDayAr (Spanish)](https://www.youtube.com/watch?v=L7t3VWMhcsQ)
 
 **What is TypeScript** (2016)
 
-[MeetupJs Spanish](https://www.youtube.com/watch?v=W8zpuxuGlqU)
+[MeetupJs (Spanish)](https://www.youtube.com/watch?v=W8zpuxuGlqU)
 
 **El zen de Angular** (2015)
 
-[MeetupJs Spanish](https://www.youtube.com/watch?v=G6m2X5pOevg)
+[MeetupJs (Spanish)](https://www.youtube.com/watch?v=G6m2X5pOevg)
 
 ## OSS
 
