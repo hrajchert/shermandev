@@ -59,7 +59,7 @@ These are my open contributions, you can see my work experience and education fr
 
 [MeetupJs (Spanish)](https://www.youtube.com/watch?v=G6m2X5pOevg)
 
-## OSS
+## Open Source
 
 **@ts-task family**
 
