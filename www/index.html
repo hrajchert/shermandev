@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title> </title>
+	<link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css">
+	<style>
+		* {
+			font-family: 'space mono'
+		}
+		html {
+			font-size: 12px;
+		}
+
+		.profile-image {
+			width: 280px;
+			height: 280px;
+		}
+		a:link, a:visited {
+			color: black;
+		}
+		article a {
+			font-weight: bold;
+		}
+		body header a {
+			text-decoration: none;
+		}
+		html, body {
+			height: 100%;
+		}
+	</style>
+	<body class="ph6-l ph4 pv4 flex flex-column justify-between">
+		<header class="flex justify-between">
+			<div class="f4 inline-flex">
+					<img src="/img/hamburger.svg" alt="menu toggle icon" class="dn-l pr3">
+				<span class="b">sherman</span>.dev
+			</div>
+			<section class="flex">
+				<nav class="pr4 dn db-l">
+					<a href="/" class="b pr4">About</a>
+					<a href="/contributions.html" class="pr4">Contributions</a>
+					<a href="/talks.html" class="pr4">Talks</a>
+					<a href="/bike-tour.html" class="">Bike Tour</a>
+				</nav>
+				<span class="bl dn db-l"></span>
+				<nav class="social pl4">
+					<a target="_blank" href="https://www.linkedin.com/in/hrajchert/"><img src="/img/linkedin.svg" alt="Linkedin"></a>
+					<a target="_blank" href="https://twitter.com/sherman3ero"><img src="/img/twitter.svg" alt="Twitter"></a>
+					<a target="_blank" href="https://github.com/hrajchert"><img src="/img/github.svg" alt="Github"></a>
+				</nav>
+			</section>
+		</header>
+		<article class="flex flex-row-l flex-column">
+			<div class="w-30-l flex justify-start-l justify-center">
+				<!-- TODO: replace images for the correct -->
+				<img src="/img/sherman.png" alt="Profile image" class="profile-image">
+			</div>
+			<div class="w-70-l">
+				<h1 class="f1-l f2">Hi! I'm Sherman,</h1>
+				<p class="f4">a Software Engineer focused on Web Technologies.</p>
+				<p class="f5">
+					I love typed languages and functional programming, currently working with TypeScript and PureScript. I am a <a href="/talks.html" title="Watch my talks">public speaker</a>, <a target="_blank"href="https://github.com/hrajchert" title="See what I do">open source contributor</a>, <a target="_blank" href="https://medium.com/@hernanrajchert" title="Read my blog">tech blogger</a> and I co-organize the Nardoz and ngBaires meetups in Buenos Aires.
+				</p>
+				<p class="f5">
+					<a href="https://twitter.com/messages/compose?recipient_id=321182179" target="_blank">Contact me</a> if you want me to talk at your event, give a workshop or if you just need some help.
+				</p>
+			</div>
+		</article>
+		<footer class="mt5">
+				<!-- <footer class="absolute bottom-2 w-100"> -->
+			<div class="flex justify-between">
+				<span>2019 Sherman.dev</span>
+				<span>hrajchert@gmail.com</span>
+			</div>
+		</footer>
+	</body>
+</html>
