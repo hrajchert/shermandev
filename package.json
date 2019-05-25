@@ -1,0 +1,25 @@
+{
+  "name": "shermandev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrajchert/shermandev.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hrajchert/shermandev/issues"
+  },
+  "homepage": "https://github.com/hrajchert/shermandev#readme",
+  "dependencies": {
+    "ect": "^0.5.9"
+  }
+}
