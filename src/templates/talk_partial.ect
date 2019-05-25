@@ -1,0 +1,13 @@
+<article class="flex flex-wrap mb4">
+	<a class="w-50-l" href="<%- @talk.link %>" target="_blank">
+		<img src="<%- @talk.img %>" alt="Watch talk">
+	</a>
+	<div class="w-50-l bg-white ph3 ph4-l">
+		<h2><%- @talk.title %></h2>
+		<% for paragraph in @talk.paragraphs : %>
+		<p class="lh-copy">
+			<%- paragraph %>
+		</p>
+		<% end %>
+	</div>
+</article>

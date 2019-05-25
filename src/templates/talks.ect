@@ -1,18 +1,17 @@
 <% extend 'layout.ect' %>
 
-<main class="w-70-l w-100 center flex flex-wrap items-center justify-center" style="background-color: #f1f1f1">
-	<div class="w-third-l w-100 tc">
-		<!-- TODO: replace images for the correct -->
-		<img src="/img/sherman.png" alt="Profile image">
-	</div>
-	<div class="w-two-thirds-l pl3-l">
-		<h1 class="f1-l f2 mt0-l mb0 pb2">Hi! I'm Sherman,</h1>
-		<h2 class="normal mt0">a Software Engineer focused on Web Technologies.</h2>
-		<p class="f5 lh-copy">
-			I love typed languages and functional programming, currently working with TypeScript and PureScript. I am a <a href="/talks.html" title="Watch my talks">public speaker</a>, <a target="_blank"href="https://github.com/hrajchert" title="See what I do">open source contributor</a>, <a target="_blank" href="https://medium.com/@hernanrajchert" title="Read my blog">tech blogger</a> and I co-organize the Nardoz and ngBaires meetups in Buenos Aires.
-		</p>
-		<p class="f5 lh-copy">
-			<a href="https://twitter.com/messages/compose?recipient_id=321182179" target="_blank">Contact me</a> if you want me to talk at your event, give a workshop or if you just need some help.
-		</p>
-	</div>
+<main class="w-100 flex flex-wrap items-center justify-center bg-black-05">
+	<section class="mw8_5 mt4_5 mt5_5-l">
+		<h1 class="f2-l f3 mb4 mt0 flex justify-center">These are my current talks</h1>
+		<% for talk in @talks.current : %>
+			<% include 'talk_partial.ect', {talk: talk} %>
+		<% end %>
+	</section>
+	<section class="mw8_5 mt4_5 mt5_5-l">
+		<h1 class="f2-l f3 mb4 mt0 flex justify-center">These are my past talks</h1>
+		<% for talk in @talks.past : %>
+			<% include 'talk_partial.ect', {talk: talk} %>
+		<% end %>
+	</section>
+
 </main>

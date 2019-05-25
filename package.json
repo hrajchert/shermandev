@@ -7,6 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
+    "prestart": "node src/index.js",
+    "start": "http-server www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +22,7 @@
   },
   "homepage": "https://github.com/hrajchert/shermandev#readme",
   "dependencies": {
-    "ect": "^0.5.9"
+    "ect": "^0.5.9",
+    "http-server": "^0.11.1"
   }
 }

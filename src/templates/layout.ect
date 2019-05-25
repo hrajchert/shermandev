@@ -11,6 +11,25 @@
 		html {
 			font-size: 12px;
 		}
+		@media screen and (min-width:60em) {
+			.ph5_5-l {
+				padding-left: 6rem;
+				padding-right: 6rem;
+			}
+			.w-65-l {
+				width: 65%;
+			}
+			.mt5_5-l {
+				margin-top: 6rem;
+			}
+		}
+
+		.mt4_5 {
+			margin-top: 3rem;
+		}
+		.mw8_5 {
+			max-width: 80rem;
+		}
 
 		a:link, a:visited {
 			color: black;
@@ -52,8 +71,8 @@
 
 	</style>
 	<body>
-		<div class="viewport mw9 center flex flex-column justify-between">
-			<header class="flex justify-between pa3">
+		<div class="viewport flex flex-column justify-between">
+			<header class="flex justify-between ph5_5-l pa3">
 				<label onclick="toggleNavigationMenu()" class="f4 inline-flex pv2">
 						<img  src="/img/hamburger.svg" alt="menu toggle icon" class="dn-l pr3">
 					<span class="b">sherman</span>.dev
@@ -73,10 +92,11 @@
 					</nav>
 				</section>
 			</header>
+
 			<% content %>
 
 			<footer>
-				<div class="flex justify-between pv4 ph3">
+				<div class="flex justify-between pv4 ph3 ph5_5-l">
 					<span>2019 Sherman.dev</span>
 					<span>hrajchert@gmail.com</span>
 				</div>
