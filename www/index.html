@@ -21,16 +21,42 @@
 		html, body {
 			height: 100%;
 		}
+		@media screen and (max-width: 60em) {
+			#navigation-menu {
+				display: flex;
+				position: absolute;
+				background-color: black;
+				left: 0;
+				flex-direction: column;
+				padding-bottom: 2rem;
+				width: 100%;
+				top: 4rem;
+				max-height: 0;
+				transition: all .5s ease .15s;
+				opacity: 0;
+			}
+			#navigation-menu.js-open-hamburguer {
+				max-height: 100%;
+				opacity: 1;
+			}
+
+			#navigation-menu a {
+				padding-left: 2rem;
+				padding-top: 2rem;
+				color: white;
+			}
+		}
+
 	</style>
 	<body>
 		<div class="mw9 center flex flex-column justify-between ph3" style="height: 100%;">
 			<header class="flex justify-between pv3">
-				<label class="f4 inline-flex pv2">
-						<img src="/img/hamburger.svg" alt="menu toggle icon" class="dn-l pr3">
+				<label onclick="toggleNavigationMenu()" class="f4 inline-flex pv2">
+						<img  src="/img/hamburger.svg" alt="menu toggle icon" class="dn-l pr3">
 					<span class="b">sherman</span>.dev
 				</label>
 				<section class="flex items-center pv2">
-					<nav class="pr3 dn db-l">
+					<nav id="navigation-menu" class="pr3 db-l">
 						<a href="/" class="b link ph2">About</a>
 						<a href="/contributions.html" class="link ph2">Contributions</a>
 						<a href="/talks.html" class="link ph2">Talks</a>
@@ -68,5 +94,11 @@
 				</div>
 			</footer>
 		</div>
+		<script>
+			function toggleNavigationMenu () {
+				const navigationMenu = document.getElementById('navigation-menu');
+				navigationMenu.classList.toggle('js-open-hamburguer');
+			}
+		</script>
 	</body>
 </html>
