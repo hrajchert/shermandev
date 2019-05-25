@@ -18,8 +18,10 @@
 		article a {
 			font-weight: bold;
 		}
-		html, body {
-			height: 100%;
+		@media screen and (min-width: 60em) {
+			html, body, .viewport {
+				height: 100%;
+			}
 		}
 		@media screen and (max-width: 60em) {
 			#navigation-menu {
@@ -49,7 +51,7 @@
 
 	</style>
 	<body>
-		<div class="mw9 center flex flex-column justify-between ph3" style="height: 100%;">
+		<div class="viewport mw9 center flex flex-column justify-between ph3">
 			<header class="flex justify-between pv3">
 				<label onclick="toggleNavigationMenu()" class="f4 inline-flex pv2">
 						<img  src="/img/hamburger.svg" alt="menu toggle icon" class="dn-l pr3">
