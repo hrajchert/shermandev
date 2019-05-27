@@ -38,8 +38,8 @@ module.exports = {
 			link: "https://www.youtube.com/watch?v=DKliwV3QdnU",
 			img: "/img/talks/code_is_data.jpg",
 			paragraphs: [
-				`When we program, our first intuition is to resolve "the happy path", do the task at hand assuming that everything works as expected, nothing fails. But sadly, "all software is broken" and in general, the bugs are not in the happy path. We need to program defensively!.`,
-				"In this talk we'll see a proof of concept of a console tool made both in JavaScript and in PureScript, concentrating in all the different things that can go wrong, trying to catch all errors so that no bug is left behind."
+				`A program is not that different to the data it uses. Aren't it all ones and zeroes?. In this talk we'll see what this concept means and some places it appears. Security holes, typed languages and the ever lasting battle between explicit and implicit code.`,
+				`Join me and let's see this patterns that are present even though we don't always think of them.`
 			]
 		},
 		{
@@ -48,8 +48,8 @@ module.exports = {
 			link: "https://www.youtube.com/watch?v=W8zpuxuGlqU",
 			img: "/img/talks/what_is_typescript.jpg",
 			paragraphs: [
-				`When we program, our first intuition is to resolve "the happy path", do the task at hand assuming that everything works as expected, nothing fails. But sadly, "all software is broken" and in general, the bugs are not in the happy path. We need to program defensively!.`,
-				"In this talk we'll see a proof of concept of a console tool made both in JavaScript and in PureScript, concentrating in all the different things that can go wrong, trying to catch all errors so that no bug is left behind."
+				`Writting JavaScript that scales can be daunting, luckly we can use a static checker that help us with some of the common bugs.`,
+				"In this talk we'll see what is TypeScript, and how we can add it to our project without dying in the process."
 			]
 		},
 		{
@@ -58,8 +58,8 @@ module.exports = {
 			link: "https://www.youtube.com/watch?v=G6m2X5pOevg",
 			img: "/img/talks/angular_zen.jpg",
 			paragraphs: [
-				`When we program, our first intuition is to resolve "the happy path", do the task at hand assuming that everything works as expected, nothing fails. But sadly, "all software is broken" and in general, the bugs are not in the happy path. We need to program defensively!.`,
-				"In this talk we'll see a proof of concept of a console tool made both in JavaScript and in PureScript, concentrating in all the different things that can go wrong, trying to catch all errors so that no bug is left behind."
+				`In this talk we'll analyze what Angular defines as it's zen. We'll see the differences between an imperative and a declarative way of programming in the web and other technologies.`,
+				`Lastly, we'll see how we apply this concepts to build the video player at Acamica`,
 			]
 		},
 	]
