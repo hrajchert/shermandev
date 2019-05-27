@@ -106,17 +106,29 @@ function initMap () {
 		});
 
 	}
+	const locationCardHolder = document.querySelector('#location-card-holder');
+
+	const rightButton: HTMLDivElement = document.querySelector('#scroll-right-button');
+	rightButton.onclick = function () {
+		console.log(locationCardHolder);
+		locationCardHolder.scrollLeft += 200;
+	}
+	const leftButton: HTMLDivElement = document.querySelector('#scroll-left-button');
+	leftButton.onclick = function () {
+		console.log(locationCardHolder);
+		locationCardHolder.scrollLeft -= 200;
+	}
 
 	const threshold = 0.5;
 	const observer = new IntersectionObserver((entries, observer) => {
-		const entry = entries[0];
-		// When only one element comes into view
-		if (entries.length === 1 && entry.intersectionRatio >= threshold) {
+		// Grab the first element comes into view
+		const entry = entries.filter(e => e.intersectionRatio >= threshold).slice(-1)[0];
+		if (entry) {
 			const place = entry.target.querySelector('h2').innerText;
 			focusOn(place);
 		}
 	}, {
-		root: document.querySelector('.location-card-holder'),
+		root: locationCardHolder,
 		threshold
 	});
 	const markers: Record<string, BikeMarker> = {};

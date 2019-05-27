@@ -22,13 +22,17 @@
 			</div>
 		</section>
 	</div>
-	<section class="location-card-holder w-100 w-80-l vh-50 h-auto-l self-start flex flex-nowrap-l flex-wrap overflow-scroll mb2">
-		<% for place in @places : %>
-			<div class="location-card pointer flex-none w5-l w-80 h4 center mr4-l mv2 pl4 bg-white flex flex-column justify-center">
-				<h2 class="mv2"><%- place[0]%></h2>
-				<span><%- place[1]%></span>
-			</div>
-		<% end %>
+	<section class=" w-100 self-start mb2 flex items-center">
+		<div id="scroll-left-button" class="w-10-l dn db-l tr pr3 f1 pointer serif"><</div>
+		<div id="location-card-holder" class=" w-100 w-80-l vh-50 h-auto-l flex flex-nowrap-l flex-wrap overflow-scroll">
+			<% for place in @places : %>
+				<div class="location-card pointer flex-none w5-l w-80 h4 center mr4-l mv2 pl4 bg-white flex flex-column justify-center">
+					<h2 class="mv2"><%- place[0]%></h2>
+					<span><%- place[1]%></span>
+				</div>
+			<% end %>
+		</div>
+		<div id="scroll-right-button" class="w-10-l dn db-l pl3 f1 pointer serif">></div>
 	</section>
 	<!-- <section class="mw8_5 mt4_5 mt5_5-l">
 		<h1 class="f2-l f3 mb4 mt0 flex justify-center">These are my current talks</h1>
