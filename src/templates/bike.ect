@@ -1,18 +1,49 @@
 <% extend 'layout.ect' %>
 
-<main class="w-70-l w-100 center flex flex-wrap items-center justify-center">
-	<div class="w-third-l w-100 tc">
-		<!-- TODO: replace images for the correct -->
-		<img src="/img/sherman.png" alt="Profile image">
+<main class="w-100 h-100 flex flex-wrap items-center justify-center bg-black-05">
+	<div class="w-80-l flex flex-wrap mb2">
+		<section class="w-40-l w-100 pl0-l pr3-l ph4 mv4 mv0-l">
+			<h1 class="f1 mv2 fw7">Bike Tour</h1>
+			<h2 class="f2 mv2 fw5">from June to September</h2>
+			<h3 class="f4 mv2 fw3">I'll be travelling with my girlfriend from Barcelona to Hamburg by 🚴‍♂️</h3>
+			<p class="lh-copy">
+				I would love to speak at a local meetup while I'm there. If you are an organizer and you like one of <a href="/talks.html">these talks</a>, please <a href="https://twitter.com/messages/compose?recipient_id=321182179" target="_blank" class="">contact me</a>.
+			</p>
+			<p class="lh-copy">
+				Also, if you are going to <a href="https://www.bus-conf.org/">BusConf</a>, I'll see you there!
+			</p>
+			<p>
+				<a class="b f4" href="https://www.instagram.com/sherman3ero_/" target="_blank">Follow the tour on Instagram</a>
+			</p>
+		</section>
+		<section class="w-60-l w-100 h5">
+			<div class="aspect-ratio aspect-ratio--wide-l h-100">
+				<div id="map" class="aspect-ratio--object" style="background-color: #d8d8d8"></div>
+			</div>
+		</section>
 	</div>
-	<div class="w-two-thirds-l pl3-l">
-		<h1 class="f1-l f2 mt0-l mb0 pb2">Hi! I'm Sherman,</h1>
-		<h2 class="normal mt0">a Software Engineer focused on Web Technologies.</h2>
-		<p class="f5 lh-copy">
-			I love typed languages and functional programming, currently working with TypeScript and PureScript. I am a <a href="/talks.html" title="Watch my talks">public speaker</a>, <a target="_blank"href="https://github.com/hrajchert" title="See what I do">open source contributor</a>, <a target="_blank" href="https://medium.com/@hernanrajchert" title="Read my blog">tech blogger</a> and I co-organize the Nardoz and ngBaires meetups in Buenos Aires.
-		</p>
-		<p class="f5 lh-copy">
-			<a href="https://twitter.com/messages/compose?recipient_id=321182179" target="_blank">Contact me</a> if you want me to talk at your event, give a workshop or if you just need some help.
-		</p>
-	</div>
+	<section class="w-100 w-80-l vh-50 h-auto-l self-start flex flex-nowrap-l flex-wrap overflow-scroll mb2">
+		<% for place in @places : %>
+			<div class="location-card pointer flex-none w5-l w-80 h4 center mr4-l mv2 pl4 bg-white flex flex-column justify-center">
+				<h2 class="mv2"><%- place[0]%></h2>
+				<span><%- place[1]%></span>
+			</div>
+		<% end %>
+	</section>
+	<!-- <section class="mw8_5 mt4_5 mt5_5-l">
+		<h1 class="f2-l f3 mb4 mt0 flex justify-center">These are my current talks</h1>
+	</section>
+	<section class="mw8_5 mt4_5 mt5_5-l">
+		<h1 class="f2-l f3 mb4 mt0 flex justify-center">These are my past talks</h1>
+	</section> -->
+
 </main>
+
+<% block 'javascript' : %>
+	<script>
+		const places = <%- JSON.stringify(@places) %>;
+	</script>
+	<script src="/js/bikes.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDR_OZx68rq78EOKwmtMQjelIjRGTn77vM&callback=initMap"></script>
+<% end %>
+

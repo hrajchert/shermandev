@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"target": "es2016",
+		"sourceRoot": "",
+		"outDir": "www/js/"
+	},
+	"include": [
+		"src/client-js/*.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"**/node_modules/*"
+	]
+}

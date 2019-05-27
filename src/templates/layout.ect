@@ -22,6 +22,9 @@
 			.mt5_5-l {
 				margin-top: 6rem;
 			}
+
+
+			.aspect-ratio--wide-l { padding-bottom: 44.14%; }
 		}
 
 		.mt4_5 {
@@ -69,6 +72,9 @@
 			}
 		}
 
+		.location-card.selected {
+			background-color: #f7cc3f;
+		}
 	</style>
 	<body>
 		<div class="viewport flex flex-column justify-between">
@@ -80,7 +86,7 @@
 				<section class="flex items-center pv2">
 					<nav id="navigation-menu" class="pr3 db-l">
 						<a href="/" class="link ph2 <%- @header.about %>">About</a>
-						<a href="/contributions.html" class="link ph2 <%- @header.contributions %>">Contributions</a>
+						<!-- <a href="/contributions.html" class="link ph2 <%- @header.contributions %>">Contributions</a> -->
 						<a href="/talks.html" class="link ph2 <%- @header.talks %>">Talks</a>
 						<a href="/bike-tour.html" class="link <%- @header.bike %>">Bike Tour</a>
 					</nav>
@@ -108,5 +114,6 @@
 				navigationMenu.classList.toggle('js-open-hamburguer');
 			}
 		</script>
+		<% content 'javascript' %>
 	</body>
 </html>
