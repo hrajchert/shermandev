@@ -5,8 +5,8 @@ interface BikeMarker {
 	circle: google.maps.Circle;
 }
 
-const SELECTED_COLOR = '#6f5501';
-// const SELECTED_COLOR = '#f7cc3f';
+// const SELECTED_COLOR = '#6f5501';
+const SELECTED_COLOR = '#f7cc3f';
 
 const UNSELECTED_COLOR = '#FF0000';
 
@@ -46,31 +46,31 @@ function initMap () {
 
 	function focusOn (placeName: string) {
 		if (focusedMarker) {
-			const strokeColor = (focusedMarker.circle as any).fillColor;
 			if (focusedMarker === selectedMarker) {
-				focusedMarker.circle.setOptions({strokeColor, radius: SELECTED_RADIUS})
+				focusedMarker.circle.setOptions({radius: SELECTED_RADIUS})
 			} else {
-				focusedMarker.circle.setOptions({strokeColor, radius: UNSELECTED_RADIUS})
+				focusedMarker.circle.setOptions({radius: UNSELECTED_RADIUS})
 			}
 		}
 
 		const marker = markers[placeName];
 		if (marker) {
 			map.panTo(marker.circle.getBounds().getCenter());
-			marker.circle.setOptions({strokeColor: SELECTED_COLOR, radius: HOVER_RADIUS});
+			marker.circle.setOptions({radius: HOVER_RADIUS});
 			focusedMarker = marker;
 		}
 	}
 
 	let selectedMarker: BikeMarker | null = null;
 	function selectMarker (placeName: string) {
+		focusOn(placeName);
 		if (selectedMarker) {
-			selectedMarker.circle.setOptions({fillColor: UNSELECTED_COLOR, radius: UNSELECTED_RADIUS});
+			selectedMarker.circle.setOptions({strokeColor: UNSELECTED_COLOR, fillColor: UNSELECTED_COLOR, radius: UNSELECTED_RADIUS});
 			selectedMarker.elm.classList.remove('selected');
 		}
 		const marker = markers[placeName];
 		if (marker) {
-			marker.circle.setOptions({fillColor: SELECTED_COLOR, radius: SELECTED_RADIUS });
+			marker.circle.setOptions({strokeColor: SELECTED_COLOR, fillColor: SELECTED_COLOR, radius: SELECTED_RADIUS });
 			selectedMarker = marker;
 			selectedMarker.elm.classList.add('selected');
 		}
@@ -107,6 +107,18 @@ function initMap () {
 
 	}
 
+	const threshold = 0.5;
+	const observer = new IntersectionObserver((entries, observer) => {
+		const entry = entries[0];
+		// When only one element comes into view
+		if (entries.length === 1 && entry.intersectionRatio >= threshold) {
+			const place = entry.target.querySelector('h2').innerText;
+			focusOn(place);
+		}
+	}, {
+		root: document.querySelector('.location-card-holder'),
+		threshold
+	});
 	const markers: Record<string, BikeMarker> = {};
 	document
 		.querySelectorAll('.location-card')
@@ -118,7 +130,8 @@ function initMap () {
 
 			elm.onclick = () => selectMarker(place);
 
-			elm.onmouseenter = () => focusOn(place);
+			// elm.onmouseenter = () => focusOn(place);
+			observer.observe(elm);
 		});
 
 	selectMarker('Barcelona');
