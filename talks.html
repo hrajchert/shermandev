@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title> </title>
+	<link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css">
+	<style>
+		* {
+			font-family: 'space mono'
+		}
+		html {
+			font-size: 12px;
+			scroll-behavior: smooth;
+		}
+		@media screen and (min-width:60em) {
+			.ph5_5-l {
+				padding-left: 6rem;
+				padding-right: 6rem;
+			}
+			.w-65-l {
+				width: 65%;
+			}
+			.mt5_5-l {
+				margin-top: 6rem;
+			}
+
+
+			.aspect-ratio--wide-l { padding-bottom: 44.14%; }
+		}
+
+		.mt4_5 {
+			margin-top: 3rem;
+		}
+		.mw8_5 {
+			max-width: 80rem;
+		}
+
+		a:link, a:visited {
+			color: black;
+		}
+		article a {
+			font-weight: bold;
+		}
+		@media screen and (min-width: 60em) {
+			html, body, .viewport {
+				height: 100%;
+			}
+		}
+		@media screen and (max-width: 60em) {
+			#navigation-menu {
+				display: flex;
+				position: absolute;
+				background-color: black;
+				left: 0;
+				flex-direction: column;
+				padding-bottom: 2rem;
+				width: 100%;
+				top: 4rem;
+				overflow: hidden;
+				max-height: 0;
+				transition: all .5s ease .15s;
+				opacity: 0;
+			}
+			#navigation-menu.js-open-hamburguer {
+				max-height: 100%;
+				opacity: 1;
+			}
+
+			#navigation-menu a {
+				padding-left: 2rem;
+				padding-top: 2rem;
+				color: white;
+			}
+		}
+
+		.location-card.selected {
+			background-color: #f7cc3f;
+		}
+	</style>
+	<body>
+		<div class="viewport flex flex-column justify-between">
+			<header class="flex justify-between ph5_5-l pa3">
+				<label onclick="toggleNavigationMenu()" class="f4 inline-flex pv2">
+						<img  src="/img/hamburger.svg" alt="menu toggle icon" class="dn-l pr3">
+					<span class="b">sherman</span>.dev
+				</label>
+				<section class="flex items-center pv2">
+					<nav id="navigation-menu" class="pr3 db-l">
+						<a href="/" class="link ph2 ">About</a>
+						<!-- <a href="/contributions.html" class="link ph2 ">Contributions</a> -->
+						<a href="/talks.html" class="link ph2 b">Talks</a>
+						<a href="/bike-tour.html" class="link ">Bike Tour</a>
+					</nav>
+					<span class="bl dn db-l h2"></span>
+					<nav class="social items-center pl3">
+						<a target="_blank" class="dim link ph1" href="https://www.linkedin.com/in/hrajchert/"><img src="/img/linkedin.svg" alt="Linkedin"></a>
+						<a target="_blank" class="dim link ph1" href="https://twitter.com/sherman3ero"><img src="/img/twitter.svg" alt="Twitter"></a>
+						<a target="_blank" class="dim link ph1" href="https://github.com/hrajchert"><img src="/img/github.svg" alt="Github"></a>
+					</nav>
+				</section>
+			</header>
+
+			
+<main class="w-100 flex flex-wrap items-center justify-center bg-black-05">
+	<section class="mw8_5 mt4_5 mt5_5-l">
+		<h1 class="f2-l f3 mb4 mt0 flex justify-center">These are my current talks</h1>
+					<article class="flex flex-wrap mb4">
+	<a class="w-50-l" href="https://www.youtube.com/watch?v=WIf582XYm-w" target="_blank">
+		<img src="/img/talks/whose-error.jpg" alt="Watch talk">
+	</a>
+	<div class="w-50-l bg-white ph3 ph4-l">
+		<h2>Houston, we have an Exception</h2>
+				<p class="lh-copy">
+			When we program, we normally focus on the happy path, resolving the task at hand and assuming that nothing can wrong go. Sadly, anything that can fail, will fail. When we sign up the username will be already in use. We will lose connection. When we call our API we'll get a 500 error or timeout, and the user will make a mistake filling the forms.		</p>
+				<p class="lh-copy">
+			So what constitutes an error? How can we avoid them or at least rest assured that they are being handled? In this talk, we'll see how we can use TypeScript to answer those questions and make our life's easier.		</p>
+			</div>
+</article>					<article class="flex flex-wrap mb4">
+	<a class="w-50-l" href="https://www.youtube.com/watch?v=56s94hJBs1Q" target="_blank">
+		<img src="/img/talks/typescript_can_do_that.jpg" alt="Watch talk">
+	</a>
+	<div class="w-50-l bg-white ph3 ph4-l">
+		<h2>TypeScript can do that?</h2>
+				<p class="lh-copy">
+			TypeScript is not a new language, is a way to type JavaScript. But given the dynamic nature of JS and the fact that it's a multi-paradigm language some challenges arise. In this talk, we'll see some of the newest TypeScript features that helps cope with this problem.		</p>
+				<p class="lh-copy">
+			We'll also see how Functional Programming relates to Object Oriented Programming and why learning one will make us better in the other.		</p>
+			</div>
+</article>					<article class="flex flex-wrap mb4">
+	<a class="w-50-l" href="https://www.youtube.com/watch?v=TCLo7D-acBI" target="_blank">
+		<img src="/img/talks/defensive-ps.jpg" alt="Watch talk">
+	</a>
+	<div class="w-50-l bg-white ph3 ph4-l">
+		<h2>Defensive programming in Node with PureScript</h2>
+				<p class="lh-copy">
+			When we program, our first intuition is to resolve "the happy path", do the task at hand assuming that everything works as expected, nothing fails. But sadly, "all software is broken" and in general, the bugs are not in the happy path. We need to program defensively!.		</p>
+				<p class="lh-copy">
+			In this talk we'll see a proof of concept of a console tool made both in JavaScript and in PureScript, concentrating in all the different things that can go wrong, trying to catch all errors so that no bug is left behind.		</p>
+			</div>
+</article>			</section>
+	<section class="mw8_5 mt4_5 mt5_5-l">
+		<h1 class="f2-l f3 mb4 mt0 flex justify-center">These are my past talks</h1>
+					<article class="flex flex-wrap mb4">
+	<a class="w-50-l" href="https://www.youtube.com/watch?v=DKliwV3QdnU" target="_blank">
+		<img src="/img/talks/code_is_data.jpg" alt="Watch talk">
+	</a>
+	<div class="w-50-l bg-white ph3 ph4-l">
+		<h2>Code is Data and viceversa</h2>
+				<p class="lh-copy">
+			A program is not that different to the data it uses. Aren't it all ones and zeroes?. In this talk we'll see what this concept means and some places it appears. Security holes, typed languages and the ever lasting battle between explicit and implicit code.		</p>
+				<p class="lh-copy">
+			Join me and let's see this patterns that are present even though we don't always think of them.		</p>
+			</div>
+</article>					<article class="flex flex-wrap mb4">
+	<a class="w-50-l" href="https://www.youtube.com/watch?v=W8zpuxuGlqU" target="_blank">
+		<img src="/img/talks/what_is_typescript.jpg" alt="Watch talk">
+	</a>
+	<div class="w-50-l bg-white ph3 ph4-l">
+		<h2>What is TypeScript</h2>
+				<p class="lh-copy">
+			Writting JavaScript that scales can be daunting, luckly we can use a static checker that help us with some of the common bugs.		</p>
+				<p class="lh-copy">
+			In this talk we'll see what is TypeScript, and how we can add it to our project without dying in the process.		</p>
+			</div>
+</article>					<article class="flex flex-wrap mb4">
+	<a class="w-50-l" href="https://www.youtube.com/watch?v=G6m2X5pOevg" target="_blank">
+		<img src="/img/talks/angular_zen.jpg" alt="Watch talk">
+	</a>
+	<div class="w-50-l bg-white ph3 ph4-l">
+		<h2>El zen de Angular</h2>
+				<p class="lh-copy">
+			In this talk we'll analyze what Angular defines as it's zen. We'll see the differences between an imperative and a declarative way of programming in the web and other technologies.		</p>
+				<p class="lh-copy">
+			Lastly, we'll see how we apply this concepts to build the video player at Acamica		</p>
+			</div>
+</article>			</section>
+
+</main>
+			<footer>
+				<div class="flex justify-between pv4 ph3 ph5_5-l">
+					<span>2019 Sherman.dev</span>
+					<span>hrajchert@gmail.com</span>
+				</div>
+			</footer>
+		</div>
+		<script>
+			function toggleNavigationMenu () {
+				const navigationMenu = document.getElementById('navigation-menu');
+				navigationMenu.classList.toggle('js-open-hamburguer');
+			}
+		</script>
+			</body>
+</html>
